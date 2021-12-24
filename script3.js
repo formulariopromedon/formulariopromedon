@@ -7,22 +7,16 @@
 // console.log(formData)
 // }
 
+function handleSubmit(event) {
+    event.preventDefault();
 
-formBR.onsubmit = async (e) => {
-    e.preventDefault();
-console.log("hola")
-var formData = new FormData(formBR); // Currently empty
+    const data = new FormData(event.target);
 
-for(let [name, value] of formData) {
-    alert(`${name} = ${value}`)
+  const value = Object.fromEntries(data.entries());
+  value.OBSERVAÇÕES = data.getAll('OBSERVAÇÕES');
 
+    console.log({ value });
+  }
 
-// let response = await fetch('/article/formdata/post/user', {
-//       method: 'POST',
-//       body: new FormData(formElem)
-//     });
-
-//     let result = await response.json();
-
-//     alert(result.message)
-}}
+  const form = document.querySelector('form');
+  form.addEventListener('submit', handleSubmit);

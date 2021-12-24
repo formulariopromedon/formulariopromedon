@@ -23,7 +23,7 @@
         <h3>FICHA DE CONTROLE</h1>
         <h3>Este formulário tem por objetivo monitorar as condições dos flexíveis identificando </br>precocemente problemas reversíveis.</h3><br>
         </div>
-     <form  id="formBR" >
+     <form>
 
         
     <br>
@@ -31,9 +31,8 @@
         <div class="row mb-3">
            <label for="nomedoinstrumentador" class="col-sm-2 control-label" >NOME DO INSTRUMENTADOR:</label>
           <div class="col-sm-10">
-            <select class="custom-select" class="form-control" id="nomedoinstrumentador" required="required">
-                <option value="">Selecione uma opção
-                </option>
+            <select class="custom-select" class="form-control" id="nomedoinstrumentador" name="nomedoinstrumentador" required="required">
+                <option value="">Selecione uma opção</option>
                 <option value="Adriano Batalha">Adriano Batalha</option>
                 <option value="Ana Carolina Pedrozo">Ana Carolina Pedrozo</option>
                 <option value="Arthur Santana">Arthur Santana</option>
@@ -68,7 +67,7 @@
         <div class="row mb-3">
          <label for="hospital" class="col-sm-2 control-label" >HOSPITAL:</label>
          <div class="col-sm-10">
-         <select class="custom-select" class="form-control" id="hospital" required="required">
+         <select class="custom-select" class="form-control" id="hospital" name="hospital" required="required">
      <option selected>Selecione uma opção</option>
       <option value="">   Albert Sabin</option>
       <option value="">   Alvorada Jacareí (Jacareí)</option>í
@@ -138,7 +137,7 @@
         <div class="row mb-3">
             <label for="hospital" class="col-sm-2 control-label" >MEDICO:</label>
             <div class="col-sm-10">       
-           <select class="custom-select" class="form-control" id="medico" required="required">
+           <select class="custom-select" class="form-control" id="medico"  name="medico" required="required">
             <option selected>Selecione uma opção
             </option>
     
@@ -391,8 +390,8 @@
         <div class="row mb-3">
             <label for="DOEQUIPAMENTO" class="col-sm-2 control-label" >DADOS DE IDENTIFICAÇÃO DO EQUIPAMENTO:</label>
             <div class="col-sm-10">       
-           <select class="custom-select" class="form-control" id="DOEQUIPAMENTO" required="required">
-            <option selected>Selecione uma opção
+        <select class="custom-select" class="form-control" id="DOEQUIPAMENTO" name="DOEQUIPAMENTO" required="required">
+            <option value="" selected>Selecione uma opção
             </option>
         <option value="">    2128812</option>
       <option value="">    2319762</option>
@@ -445,8 +444,8 @@
    <option value=""> 2102101</option>
    <option value=""> 2102102</option>
    <option value=""> Opção 52</option>
-          </select>
-            </div>
+        </select>
+        </div>
         </div>
       
   <!--Observaciones:-->
@@ -454,37 +453,37 @@
     <label for="OBSERVACIONES" class="col-sm-2 control-label" >OBSERVAÇÕES</label>
      <div class="col-sm-10">
        <div class="form-check">
-         <input class="form-check-input" type="checkbox" id="gridCheck1">
-         <label class="form-check-label" for="gridCheck1">
+         <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Equipamento em bom estado" name="OBSERVAÇÕES" value="Equipamento em bom estado">
+         <label class="form-check-label"     for="gridCheck1">
            Equipamento em bom estado 
          </label>
        </div>
        <div class="form-check">
-           <input class="form-check-input" type="checkbox" id="gridCheck1">
+           <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Problemas na deflexão" name="OBSERVAÇÕES" value="Problemas na deflexão">
            <label class="form-check-label" for="gridCheck1">
                Problemas na deflexão
            </label>
          </div>
          <div class="form-check">
-           <input class="form-check-input" type="checkbox" id="gridCheck1">
+           <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Problemas com borracha da ponta"  name="OBSERVAÇÕES" value="Problemas com borracha da ponta">
            <label class="form-check-label" for="gridCheck1">
                Problemas com borracha da ponta
            </label>
          </div>
          <div class="form-check">
-           <input class="form-check-input" type="checkbox" id="gridCheck1">
+           <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Desalinhamento do horizonte" name="OBSERVAÇÕES" value="Desalinhamento do horizonte">
            <label class="form-check-label" for="gridCheck1">
                Desalinhamento do horizonte
            </label>
          </div>
          <div class="form-check">
-           <input class="form-check-input" type="checkbox" id="gridCheck1">
+           <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Problemas no canal de trabalhoe" name="OBSERVAÇÕES"  value="Problemas no canal de trabalhoe">
            <label class="form-check-label" for="gridCheck1">
                Problemas no canal de trabalho
            </label>
          </div>
          <div class="form-check">
-           <input class="form-check-input" type="checkbox" id="gridCheck1">
+           <input class="form-check-input" type="checkbox" id="gridCheck1" id="OBSERVAÇÕES-Exposição da malha do tubo de inserção" name="OBSERVAÇÕES"  value="Exposição da malha do tubo de inserção">
            <label class="form-check-label" for="gridCheck1">
                Exposição da malha do tubo de inserção 
            </label>
@@ -675,7 +674,7 @@
    <div class="row mb-3">
     <label for="exampleFormControlTextarea1" class="col-sm-2 control-label" >ESTADO GERAL:</label>
      <div class="col-sm-10">
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea class="form-control" name="exampleFormControlTextarea1" id="exampleFormControlTextarea1" rows="3"></textarea>
  
        
                
