@@ -14,7 +14,6 @@ function handleSubmit(event) {
 
   const value = Object.fromEntries(data.entries());
   value.OBSERVAÇÕES = data.getAll('OBSERVAÇÕES');
-
     console.log({ value });
   }
 
