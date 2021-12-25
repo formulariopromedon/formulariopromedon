@@ -1,357 +1,371 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="/bower_components/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/bower_components/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
     <title>FICHA DE CONTROLE</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  </head>
+  <body>
+    <br>
+<div class="container">
+    <div class="col align-items-center">
+        <div class="row">    
+        <h3>FICHA DE CONTROLE</h1>
+        <h3>Este formulário tem por objetivo monitorar as condições dos flexíveis identificando </br>precocemente problemas reversíveis.</h3><br>
+        </div>
+     <form>
 
-    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"/>
-    <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.css" rel="stylesheet"/>
-    
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
-    <link rel="stylesheet" href="indexCss.css">
-</head>
-<body>
-  
-   
-  <div class="decor"> 
-    <div class="form-left-decoration"></div>
-    <div class="form-right-decoration"></div>
-      <div class="circle"></div>
-      
-      <div class="form-inner">
-        <form >
+        
+    <br>
+<!--NOME DO INSTRUMENTADOR-->
+        <div class="row mb-3">
+           <label for="nomedoinstrumentador" class="col-sm-2 control-label" >NOME DO INSTRUMENTADOR:</label>
+          <div class="col-sm-10">
+            <select class="custom-select" class="form-control" id="nomedoinstrumentador" name="nomedoinstrumentador" required="required">
+                <option value="">Selecione uma opção</option>
+                <option value="Adriano Batalha">Adriano Batalha</option>
+                <option value="Ana Carolina Pedrozo">Ana Carolina Pedrozo</option>
+                <option value="Arthur Santana">Arthur Santana</option>
+                <option value="Caio Cesar Gomes">Caio Cesar Gomes</option>
+                <option value="Nataly Goes">Nataly Goes</option>
+                <option value="Daniel">Daniel</option>
+                <option value="Edson Batista dos Santos">Edson Batista dos Santos</option>
+                <option value="Ester Tavares">Ester Tavares</option>
+                <option value="Fabiana Santana">Fabiana Santana</option>
+                <option value="Fabiana Valente">Fabiana Valente</option>
+                <option value="Fernando">Fernando</option>
+                <option value="Henrique">Henrique</option>
+                <option value="Kelly (Vale)">Kelly (Vale)</option>
+                <option value="Leandro">Leandro</option>
+                <option value="Liliana Fernandez Janez">Liliana Fernandez Janez</option>
+                <option value="Lísia Paiva">Lísia Paiva</option>
+                <option value="Luciana (Vale)">Luciana (Vale)</option>
+                <option value="Maiara">Maiara</option>
+                <option value="Mariana Aguilar">Mariana Aguilar</option>
+                <option value="Rafaela (Vale)">Rafaela (Vale)</option>
+                <option value="Rebeca Camargo">Rebeca Camargo</option>
+                <option value="Talita Sena Rocha">Talita Sena Rocha</option>
+                <option value="Veridiane Barcelos Machado">Veridiane Barcelos Machado</option>
+                <option value="Vitor Garcia">Vitor Garcia</option>
+                <option value="Wellington Oliveira">Wellington Oliveira</option>
+                <option value="Outro">Outro</option> 
+              </select>
+          </div>
+        </div>
 
-        <h1>FICHA DE CONTROLE</h1>
-        <h3>Este formulário tem por objetivo monitorar as condições dos flexíveis identificando </br>precocemente problemas reversíveis.</h3>
-       <!-- Primera pregunta -->
-        <label>NOME DO INSTRUMENTADOR:</label>
-         <select required>
-          <option selected>Selecione uma opção
-          </option>
-          <option value="1">Adriano Batalha</option>
-          <option value="1">Ana Carolina Pedrozo </option>
-          <option value="1">Arthur Santana</option>
-          <option value="1">Caio Cesar Gomes</option>
-          <option value="1">Nataly Goes</option>
-          <option value="1">Daniel</option>
-          <option value="1">Edson Batista dos Santos</option>
-          <option value="1">Ester Tavares</option>
-          <option value="1">Fabiana Santana</option>
-          <option value="1">Fabiana Valente</option>
-          <option value="1">Fernando</option>
-          <option value="1">Henrique</option>
-          <option value="1">Kelly (Vale)</option>
-          <option value="1">Leandro</option>
-          <option value="1">Liliana Fernandez Janez</option>
-          <option value="1">Lísia Paiva</option>
-          <option value="1">Luciana (Vale)</option>
-          <option value="1">Maiara</option>
-          <option value="1">Mariana Aguilar</option>
-          <option value="1">Rafaela (Vale)</option>
-          <option value="1">Rebeca Camargo</option>
-          <option value="1">Talita Sena Rocha</option>
-          <option value="1">Veridiane Barcelos Machado</option>
-          <option value="1">Vitor Garcia</option>
-          <option value="1">Wellington Oliveira</option>
-          <option value="1">Outro</option> 
-        </select><br><br>
-        <label>HOSPITAL:</label>
-        <select style="max-width:90%">
+<!--HOSPITAL-->
+        <div class="row mb-3">
+         <label for="hospital" class="col-sm-2 control-label" >HOSPITAL:</label>
+         <div class="col-sm-10">
+         <select class="custom-select" class="form-control" id="hospital" name="hospital" required="required">
      <option selected>Selecione uma opção</option>
-      <option value="">   Albert Sabin</option>
-      <option value="">   Alvorada Jacareí (Jacareí)</option>í
-      <option value="">   Alvorada Moema</option>
-      <option value="">   Alvorada Santo Amaro</option>
-      <option value="">  Antônio Afonso (Jacareí)</option>
-      <option value="">  Antoninho da Rocha Marmo (SJC)</option>
-      <option value="">   Bosque da Saúde</option>
-      <option value="">   Carlos Chagas</option>
+      <option value="Albert Sabin">   Albert Sabin</option>
+      <option value="Alvorada Jacareí (Jacareí)">   Alvorada Jacareí (Jacareí)</option>í
+      <option value="Alvorada Moema">   Alvorada Moema</option>
+      <option value="Alvorada Santo Amaro">   Alvorada Santo Amaro</option>
+      <option value="Antônio Afonso (Jacareí)">  Antônio Afonso (Jacareí)</option>
+      <option value="Antoninho da Rocha Marmo (SJC)">  Antoninho da Rocha Marmo (SJC)</option>
+      <option value="Bosque da Saúde">   Bosque da Saúde</option>
+      <option value="Carlos Chagas">   Carlos Chagas</option>
 
-      <option value="">    Casa de Saúde de Santos (Santos)</option>
+      <option value="Casa de Saúde de Santos (Santos)">    Casa de Saúde de Santos (Santos)</option>
      
-      <option value="">  Cruzeiro do Sul (Osasco)</option>
-      <option value="">  Dom João Becker</option>
-      <option value="">   Edmundo Vasconcelos</option>
-      <option value="">   Frei Galvão (Santos)</option>
-      <option value="">   FUSAM</option>
-      <option value="">  GACC (SJC)</option>
-      <option value="">  Hospital Clinica São José (SJC)</option>
-      <option value="">  Hospital Regina</option>
-      <option value="">   Igesp</option>
-     <option value="">  Ipiranga de Mogi (Mogi das Cruzes)</option>
-      <option value="">   M' Boi Mirim</option>
-      <option value="">   Mandaqui</option>
-      <option value="">   Maternidade de Guarulhos (Guarulhos)</option> 
-      <option value="">   Metropolina Lapa</option>
-      <option value="">   Next São Bernardo do Campo</option>
-      <option value="">   Nossa Senhora do Rosário</option>
-      <option value="">   Paulo Sacramento (Jundiaí)</option>
-      <option value="">   Pro XII (SJC)</option>
-      <option value="">   Policlin Jacareí</option>
-      <option value="">  Policlin (SJC)</option>
-      <option value="">  PA UNIMED (SJC)</option>
-      <option value="">  Samaritano Higienópolis</option>
-      <option value="">   Samaritano Paulista</option>
-      <option value="">   Salvalus</option>
-      <option value="">   San Paolo</option>
-      <option value="">   Santa Casa de Jacareí (Jacareí)</option> 
- <option value="">   Santa Casa de São José dos Campos (SJC)</option>
- <option value="">Santa Catarina </option>
-      <option value="">   Santa Cruz</option>
-      <option value="">   Santa Isabel</option>
-      <option value="">   Santa Marcelina</option>
-      <option value="">   Santa Maria de Suzano</option>
-      <option value="">   Santa Paula</option>
-      <option value="">  Santana de Mogi (Mogi das Cruzes)</option> 
-      <option value="">   Santos Dumont (SJC)</option>
-      <option value="">   São Camilo Ipiranga</option>
-      <option value="">   São Camilo Pompeia</option>
-      <option value="">   São Camilo Santana</option>
-      <option value="">   São Francisco (Jacareí)</option>
-      <option value="">   São Luiz Jabaquara</option>
-      <option value="">  Sírio Libanês</option>
-      <option value="">   Vila Lobos</option>
-      <option value="">  Vitória</option>
-      <option value="">  Vivalle (SJC)</option>
-      <option value="">  Unimed Caçapava (Caçapava)</option>
-      <option value="">   Unimed Guarulhos (Guarulhos)</option>
-      <option value="">   Unimed Novo Hamburgo</option>
-      <option value="">   Unimed São Leopoldo</option>
-      <option value="">   Outros  </option>
-        </select><br><br>
+      <option value="Cruzeiro do Sul (Osasco)">  Cruzeiro do Sul (Osasco)</option>
+      <option value="Dom João Becker">  Dom João Becker</option>
+      <option value="Edmundo Vasconcelos">   Edmundo Vasconcelos</option>
+      <option value="Frei Galvão (Santos)">   Frei Galvão (Santos)</option>
+      <option value="FUSAM">   FUSAM</option>
+      <option value="GACC (SJC)">  GACC (SJC)</option>
+      <option value="Hospital Clinica São José (SJC)">  Hospital Clinica São José (SJC)</option>
+      <option value="Hospital Regina">  Hospital Regina</option>
+      <option value="Igesp">   Igesp</option>
+      <option value="Ipiranga de Mogi (Mogi das Cruzes)">  Ipiranga de Mogi (Mogi das Cruzes)</option>
+      <option value="M' Boi Mirim">   M' Boi Mirim</option>
+      <option value="Mandaqui">   Mandaqui</option>
+      <option value="Maternidade de Guarulhos (Guarulhos)">   Maternidade de Guarulhos (Guarulhos)</option> 
+      <option value="Metropolina Lapa">   Metropolina Lapa</option>
+      <option value="Next São Bernardo do Campo">   Next São Bernardo do Campo</option>
+      <option value="Nossa Senhora do Rosário">   Nossa Senhora do Rosário</option>
+      <option value=" Paulo Sacramento (Jundiaí)">   Paulo Sacramento (Jundiaí)</option>
+      <option value="Pro XII (SJC)">   Pro XII (SJC)</option>
+      <option value="Policlin Jacareí">   Policlin Jacareí</option>
+      <option value="Policlin (SJC)">  Policlin (SJC)</option>
+      <option value="PA UNIMED (SJC)">  PA UNIMED (SJC)</option>
+      <option value="Samaritano Higienópolis">  Samaritano Higienópolis</option>
+      <option value="Samaritano Paulista">   Samaritano Paulista</option>
+      <option value="Salvalus">   Salvalus</option>
+      <option value="San Paolo">   San Paolo</option>
+      <option value="Santa Casa de Jacareí (Jacareí)">   Santa Casa de Jacareí (Jacareí)</option> 
+      <option value="Santa Casa de São José dos Campos (SJC)">   Santa Casa de São José dos Campos (SJC)</option>
+      <option value="Santa Catarina"> Santa Catarina </option>
+      <option value="Santa Cruz">   Santa Cruz</option>
+      <option value="Santa Isabel">   Santa Isabel</option>
+      <option value="Santa Marcelina">   Santa Marcelina</option>
+      <option value="Santa Maria de Suzano">   Santa Maria de Suzano</option>
+      <option value="Santa Paula">   Santa Paula                             </option>
+      <option value="Santana de Mogi (Mogi das Cruzes)">  Santana de Mogi (Mogi das Cruzes)             </option> 
+      <option value="Santos Dumont (SJC)">   Santos Dumont (SJC)                    </option>
+      <option value="São Camilo Ipiranga">   São Camilo Ipiranga                          </option>
+      <option value="São Camilo Pompeia">   São Camilo Pompeia                             </option>
+      <option value="São Camilo Santana">   São Camilo Santana                       </option>
+      <option value="São Francisco (Jacareí)">   São Francisco (Jacareí)                      </option>
+      <option value="São Luiz Jabaquara">   São Luiz Jabaquara                             </option>
+      <option value="Sírio Libanês">  Sírio Libanês                            </option>
+      <option value="Vila Lobos">   Vila Lobos                               </option>
+      <option value="Vitória">  Vitória                                         </option>
+      <option value="Vivalle (SJC)">  Vivalle (SJC)                                     </option>
+      <option value="Unimed Caçapava (Caçapava)">  Unimed Caçapava (Caçapava)                          </option>
+      <option value="Unimed Guarulhos (Guarulhos)">   Unimed Guarulhos (Guarulhos)                     </option>
+      <option value="Unimed Novo Hamburgo">   Unimed Novo Hamburgo                     </option>
+      <option value="Unimed São Leopoldo">   Unimed São Leopoldo                        </option>
+      <option value="Outros">   Outros                                </option>
+        </select>
+         </div>
+        </div>
 
-        <label>MEDICO:      </label>
-        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-          <option selected>Selecione uma opção
-          </option>
-  
-  
-   <option value="">    Adriano Pinto</option>
-   <option value="">    Adriano Couto</option>
-   <option value="">    Alan Barbosa</option>
-   <option value="">   Alberto Kalil Kobbaz</option>
-   <option value="">    Alberty Oliveira Freitas</option>
-   <option value="">    Alcedir</option>
-   <option value="">    Alessandro Venglier</option>
-   <option value="">    Alex Meneses</option>
-   <option value="">    Alexandre Bull</option>
-   <option value="">   Alexandre Stefano Carlos</option>
-   <option value="">    Ali</option>
-   <option value="">    Anis Taha</option></option>
-   <option value="">    Antonio Calil Assumpção</option>
-   <option value="">    Antônio Cardoso Pinto</option>
-   <option value="">    Antônio Rocha</option>
-   <option value="">   Arthur Ramos Moreno</option>
-   <option value="">    Augusto Caparica</option>
-   <option value="">    Bruno Camargo Tiseo</option>
-   <option value="">    Bruno Hurtado</option>
-   <option value="">    Bruno Nascimento</option>
-   <option value="">    Bruno Simão</option>
-   <option value="">    Carlos Cadu</option>
-   <option value="">    Caio Cesar Cintra</option>
-   <option value="">    Carlos Alberto</option>
-   <option value="">    Carlos Cunha</option>
-   <option value="">    Carlos Eduardo Bonafe</option>
-   <option value="">    Claudio Hideki Toi</option>
-   <option value="">    Cleverson Biscotto Ferreira</option>
-   <option value="">    Camillo Loprete</option>
-   <option value="">    Camilo Mota</option>
-   <option value="">    Camilo de Carvalho Jorgetti</option>
-   <option value="">    Carlos Alberto Santos</option>
-   <option value="">    Carlos Penteado</option>
-   <option value="">    Cauê Dezotti</option>
-   <option value="">    César Augusto Ogawa</option>
-   <option value="">  Cesar Thiago</option>
-   <option value="">    Christin Frederich</option>
-   <option value="">    Conrado Pascini</option>
-   <option value="">    Cristiano Bortolin</option>
-   <option value="">    Dalmo de Barros</option>
-   <option value="">    Daniel Ayres</option>
-   <option value="">    Daniel Beltrane</option>
-   <option value="">    Daniel Ilias</option>
-   <option value="">    Danilo Budib</option>
-   <option value="">    Darlan</option>
-   <option value="">    David Cohen</option>
-   <option value="">    Diego Shiguemi Ikejiri</option>
-   <option value="">    Eduardo Barros</option>
-   <option value="">    Eduardo Muracca</option>
-   <option value="">    Eder Nisi</option>
-   <option value="">    Edson</option>
-   <option value="">    Eduardo Lopez Mazzucato</option>
-   <option value="">    Eduardo Remaile</option>
-   <option value="">    Élcio</option>
-   <option value="">    Elton Sanchotene</option>
-   <option value="">    Enrico Hasegawa</option>
-   <option value="">    Eraldo Alves Bezerra</option>
-   <option value="">    Ernestino Craveiro Gomes</option>
-   <option value="">    Estefania Nicoleti</option>
-   <option value="">   Fábio Alexandre Pardal</option>
-   <option value="">   Fábio Ferro Rodrigues</option>
-   <option value="">   Fábio Lichand</option>
-   <option value="">    Fábio Cesar Torricelli</option>
-   <option value="">    Fábio Yoshiaki Tanno</option>
-   <option value="">    Fabricio Chaves Novaes</option>
-   <option value="">    Felipe Domingues</option>
-   <option value="">    Felipe Plugiesi</option>
-   <option value="">    Felipe Vasconcelos</option>
-   <option value="">    Felipe Saraiva</option>
-   <option value="">    Fernando Almeida</option>
-   <option value="">   Fernando José Akira Sato</option>
-   <option value="">    Fernando Carboni Tardelli</option>
-   <option value="">    Fernando Berti</option>
-   <option value="">    Fernando de Queirós</option>
-   <option value="">    Flávio Trigo</option>
-   <option value="">    Francisco Hidelbrando</option>
-   <option value="">   Frederico Vilela de Oliveira</option>
-   <option value="">    Gilberto Chavarria</option>
-   <option value="">    Gilberto Viana</option>
-   <option value="">    Glauco Chiaradia</option>
-   <option value="">    Giovanni Marchini Scala</option>
-   <option value="">    Guilherme Braga</option>
-   <option value="">    Gustavo Feroni</option>
-   <option value="">    Gustavo Notari</option>
-   <option value="">    Gustavo Medeiros</option>
-   <option value="">    Gustavo Moreira Lima</option>
-   <option value="">    Herval</option>
-   <option value="">    Hugo Queiroz</option>
-   <option value="">    Isaac Amselem</option>
-   <option value="">    Jair Pedralli</option>
-   <option value="">    Jamily</option>
-   <option value="">    Jean Marcel Martins Borgo</option>
-   <option value="">   João Leão e Souza Neto</option>
-   <option value="">   João Paulo da Cunha Lima</option>
-<option value="">  João Paulo de Oliveira</option>
-<option value="">  João Paulo Greco</option>
-<option value="">  Jorg Daoud Merched Youssef</option>
-<option value="">  Jorge Cezar Pereira de Castro</option>
-<option value="">  Jorge Miranda</option>
-<option value="">  José Augusto Bittencourt</option>
-<option value="">  Jose Carlos Truzzi</option>
-<option value="">  José Freitas Melo Junior</option>
-<option value="">  José Henrique Di Giovanni</option>
-<option value="">  José Luiz Nardi</option>
-<option value="">  José Paulo Coelho Martini</option>
-<option value="">  José Ronaldo Bigatão</option>
-<option value="">  Josinelio</option>
-<option value="">  Júlio Cesar Campos Bissoli</option>
-<option value="">  Julio Padovani</option>
-<option value="">  Kleiton Yamacake</option>
-<option value="">  Laércio Zavaloni</option>
-<option value="">  Leonardo Inácio Braga</option>
-<option value="">  Leonardo Lá Regina</option>
-<option value="">  Leonardo Welter</option>
-<option value="">  Lucas Furtado Faria</option>
-<option value="">  Lucas La Ferreira</option>
-<option value="">  Lucas Lambert</option>
-<option value="">  Lino Cerveira</option>
-<option value="">  Luís Bonetti</option>
-<option value="">  Luis Fernando Rocha de Abreu</option>
-<option value="">  Luis Gustavo</option>
-<option value="">  Luiz Antônio Bonetti Junior</option>
-<option value="">  Luiz Cláudio Limão</option>
-<option value="">  Luiz Dorley</option>
-<option value="">  Luiz Eduardo Ferreti</option>
-<option value="">  Luiz Felipe Brollo</option>
-<option value="">  Luccas Soares</option>
-<option value="">  Marcello Schettino Barbosa</option>
-<option value="">  Marcelo Apezzato</option>
-<option value="">  Marcelo Fornazzari</option>
-<option value="">  Marcelo Leite</option>
-<option value="">  Marcelo Lorenzi</option>
-<option value="">  Marcelo Santos</option>
-<option value="">  Marcelo Wassano</option>
-<option value="">  Márcio Navarro Gianelo</option>
-<option value="">  Márcio Pontes Reis</option>
-<option value="">  Opção 101</option>
-<option value="">  Márcio Rosa Pagan</option>
-<option value="">  Marco Antonio Arap</option>
-<option value="">  Marco Antônio Calil Assumpção</option>
-<option value="">  Marco Antônio Fioravante</option>
-<option value="">  Marco Tulio Coelho Lasmar</option>
-<option value="">  Marcos Figueiredo Mello</option>
-<option value="">  Marcos Segawa</option>
-<option value="">  Marcos Kiyoshi</option>
-<option value="">  Marlon Fiorentini</option>
-<option value="">  Mario Bittar</option>
-<option value="">  Mário Henrique Bueno Bavaresco</option>
-<option value="">  Mário José</option>
-<option value="">  Mário Luis Casella</option>
-<option value="">  Matheus Amaral</option>
-<option value="">  Matheus Almeida C Siqueira</option>
-<option value="">  Matheus Ferreira</option>
-<option value="">  Matheus Neves Ribeiro</option>
-<option value="">  Mauricio Akira</option>
-<option value="">  Maurício Peres</option>
-<option value="">  Maurilio Lucio Lima Meneguci</option>
-<option value="">  Nelson Luis Anacleto Artea</option>
-<option value="">  Nelson Luiz Artéa</option>
-<option value="">  Nyander Alex Ramos</option>
-<option value="">  Newton Soares de Sa Filho</option>
-<option value="">  Ocivaldo</option>
-<option value="">  Oscar Eduardo Hidetoshi Fugita</option>
-<option value="">  Paulo Nogueira</option>
-<option value="">  Pedro Dias Soares</option>
-<option value="">  Pedro Zapparoli Padovani</option>
-<option value="">  Pericles Auad</option>
-<option value="">  Paulo Ebert Esteves</option>
-<option value="">  Paulo Maron</option>
-<option value="">  Paulo Pontes</option>
-<option value="">  Rafael C. Prata</option>
-<option value="">  Rafael Eduardo Marques</option>
-<option value="">  Rafael Spada Rebechi</option>
-<option value="">  Raphael Barroso Kato</option>
-<option value="">  Raphael Sanches</option>
-<option value="">  Rafael Romero</option>
-<option value="">  Raul Queiroz Ferreira</option>
-<option value="">  Renato Alvim Soares</option>
-<option value="">  Renato Vasconcelos</option>
-<option value="">  Renato Yama</option>
-<option value="">  Ricardo Brites</option>
-<option value="">  Ricardo Cartaxo Filho</option>
-<option value="">  Ricardo Di Miguelli</option>
-<option value="">  Ricardo Marcondes de Mattos</option>
-<option value="">  Ricardo Segabinazzi</option>
-<option value="">  Robert Conti</option>
-<option value="">  Rodrigo Bocos</option>
-<option value="">  Rodrigo Madeira Campos</option>
-<option value="">  Rodrigo Silva</option>
-<option value="">  Rodolfo Otávio Tomaz Bertti</option>
-<option value="">  Rodrigo Alcantara</option>
-<option value="">  Rodrigo Gonzales Bocos</option>
-<option value="">  Rodrigo Luvizotto</option>
-<option value="">  Rodrigo Rodrigues Pessoa</option>
-<option value="">  Rodrigo Wilson</option>
-<option value="">  Ronnie</option>
-<option value="">  Samuel Costa</option>
-<option value="">  Sander Cássio Zequi</option>
-<option value="">  Sandro Nassar</option>
-<option value="">  Sandro W</option>
-<option value="">  Sergio Eduardo Martins</option>
-<option value="">  Sergio Leite Ottoni</option>
-<option value="">  Tarcísio</option>
-<option value="">  Tiago Magalhães</option>
-<option value="">  Thiago Souto Hemerly</option>
-<option value="">  Thyago Vieira Soares</option>
-<option value="">  Wagner Morandini</option>
-<option value="">  Vasco Crivelaro</option>
-<option value="">  Victor Monteiro</option>
-<option value="">  Wanderley Crestoni Fernandes</option>
-<option value="">  Wilson Sato</option>
-<option value="">  Ying Li Chiang</option>
-<option value="">  Zein Mohamed</option>
-<option value="">  Outros</option>
-        </select><br><br>
-    <div class="row">
-      
-        <div class='col-sm-2'>
-          <label >DATA DA CIRURGIA: </label>
+<!--MÉDICO-->
+        <div class="row mb-3">
+            <label for="hospital" class="col-sm-2 control-label" >MEDICO:</label>
+            <div class="col-sm-10">       
+           <select class="custom-select" class="form-control" id="medico"  name="medico" required="required">
+            <option selected>Selecione uma opção
+            </option>
+    
+    
+     <option value="Adriano Pinto">    Adriano Pinto</option>
+     <option value="Adriano Couto">    Adriano Couto</option>
+     <option value="Alan Barbosa">    Alan Barbosa</option>
+     <option value="Alberto Kalil Kobbaz">   Alberto Kalil Kobbaz</option>
+     <option value="Alberty Oliveira Freitas">    Alberty Oliveira Freitas</option>
+     <option value="Alcedir">    Alcedir</option>
+     <option value="Alessandro Venglier">    Alessandro Venglier</option>
+     <option value="Alex Meneses">    Alex Meneses</option>
+     <option value="Alexandre Bull">    Alexandre Bull</option>
+     <option value="Alexandre Stefano Carlo">   Alexandre Stefano Carlos</option>
+     <option value="Ali">    Ali</option>
+     <option value="Anis Taha">    Anis Taha</option></option>
+     <option value="Antonio Calil Assumpção">    Antonio Calil Assumpção</option>
+     <option value="Antônio Cardoso Pinto">    Antônio Cardoso Pinto</option>
+     <option value="Antônio Rocha">    Antônio Rocha</option>
+     <option value="Arthur Ramos Moreno">   Arthur Ramos Moreno</option>
+     <option value="Augusto Caparica">    Augusto Caparica</option>
+     <option value="Bruno Camargo Tiseo">    Bruno Camargo Tiseo</option>
+     <option value="Bruno Hurtado">    Bruno Hurtado</option>
+     <option value="Bruno Nascimento">    Bruno Nascimento</option>
+     <option value="Bruno Simão">    Bruno Simão</option>
+     <option value="Carlos Cadu">    Carlos Cadu</option>
+     <option value="Caio Cesar Cintra">    Caio Cesar Cintra</option>
+     <option value="Carlos Alberto">    Carlos Alberto</option>
+     <option value="Carlos Cunha">    Carlos Cunha</option>
+     <option value="Carlos Eduardo Bonafe">    Carlos Eduardo Bonafe</option>
+     <option value="Claudio Hideki Toi">    Claudio Hideki Toi</option>
+     <option value="Cleverson Biscotto Ferreira">    Cleverson Biscotto Ferreira</option>
+     <option value="Camillo Loprete">    Camillo Loprete</option>
+     <option value=" Camilo Mota">    Camilo Mota</option>
+     <option value="Camilo de Carvalho Jorgetti">    Camilo de Carvalho Jorgetti</option>
+     <option value="Carlos Alberto Santos">    Carlos Alberto Santos</option>
+     <option value="Carlos Penteado">    Carlos Penteado</option>
+     <option value="Cauê Dezotti">    Cauê Dezotti</option>
+     <option value="César Augusto Ogawa">    César Augusto Ogawa</option>
+     <option value="Cesar Thiago">  Cesar Thiago</option>
+     <option value="Christin Frederich">    Christin Frederich</option>
+     <option value="Conrado Pascini">    Conrado Pascini</option>
+     <option value="Cristiano Bortolin">    Cristiano Bortolin</option>
+     <option value="Dalmo de Barros">    Dalmo de Barros</option>
+     <option value="Daniel Ayres">    Daniel Ayres</option>
+     <option value="Daniel Beltrane">    Daniel Beltrane</option>
+     <option value="Daniel Ilias">    Daniel Ilias</option>
+     <option value="Danilo Budib">    Danilo Budib</option>
+     <option value="Darlan">    Darlan</option>
+     <option value="David Cohen">    David Cohen</option>
+     <option value="Diego Shiguemi Ikejiri">    Diego Shiguemi Ikejiri</option>
+     <option value="Eduardo Barros">    Eduardo Barros</option>
+     <option value="Eduardo Muracca">    Eduardo Muracca</option>
+     <option value="Eder Nisi">    Eder Nisi</option>
+     <option value="Edson">    Edson</option>
+     <option value="Eduardo Lopez Mazzucato">    Eduardo Lopez Mazzucato</option>
+     <option value="Eduardo Remaile">    Eduardo Remaile</option>
+     <option value="Élcio">    Élcio</option>
+     <option value="Elton Sanchotene">    Elton Sanchotene</option>
+     <option value="Enrico Hasegawa">    Enrico Hasegawa</option>
+     <option value="Eraldo Alves Bezerra">    Eraldo Alves Bezerra</option>
+     <option value="Ernestino Craveiro Gomes">    Ernestino Craveiro Gomes</option>
+     <option value="Estefania Nicoleti">    Estefania Nicoleti</option>
+     <option value="Fábio Alexandre Pardal">   Fábio Alexandre Pardal</option>
+     <option value="Fábio Ferro Rodrigues">   Fábio Ferro Rodrigues</option>
+     <option value="Fábio Lichand">   Fábio Lichand</option>
+     <option value="Fábio Cesar Torricelli">    Fábio Cesar Torricelli</option>
+     <option value="Fábio Yoshiaki Tann">    Fábio Yoshiaki Tanno</option>
+     <option value="Fabricio Chaves Novaes">    Fabricio Chaves Novaes</option>
+     <option value="Felipe Domingues">    Felipe Domingues</option>
+     <option value="Felipe Plugiesi">    Felipe Plugiesi</option>
+     <option value="Felipe Vasconcelos">    Felipe Vasconcelos</option>
+     <option value="Felipe Saraiva">    Felipe Saraiva</option>
+     <option value="Fernando Almeida">    Fernando Almeida</option>
+     <option value="Fernando José Akira Sato">   Fernando José Akira Sato</option>
+     <option value="Fernando Carboni Tardelli">    Fernando Carboni Tardelli</option>
+     <option value="Fernando Berti">    Fernando Berti</option>
+     <option value="Fernando de Queirós">    Fernando de Queirós</option>
+     <option value="Flávio Trigo">    Flávio Trigo</option>
+     <option value="Francisco Hidelbrand">    Francisco Hidelbrando</option>
+     <option value="Frederico Vilela de Oliveira">   Frederico Vilela de Oliveira</option>
+     <option value="Gilberto Chavarria">    Gilberto Chavarria</option>
+     <option value="Gilberto Viana">    Gilberto Viana</option>
+     <option value="Glauco Chiaradia">    Glauco Chiaradia</option>
+     <option value="Giovanni Marchini Scala">    Giovanni Marchini Scala</option>
+     <option value="Guilherme Braga">    Guilherme Braga</option>
+     <option value="Gustavo Feroni">    Gustavo Feroni</option>
+     <option value="Gustavo Notari">    Gustavo Notari</option>
+     <option value="Gustavo Medeiros">    Gustavo Medeiros</option>
+     <option value="Gustavo Moreira Lima">    Gustavo Moreira Lima</option>
+     <option value="Herval">    Herval</option>
+     <option value="Hugo Queiroz">    Hugo Queiroz</option>
+     <option value="Isaac Amselem">    Isaac Amselem</option>
+     <option value="Jair Pedralli">    Jair Pedralli</option>
+     <option value="Jamily">    Jamily</option>
+     <option value="Jean Marcel Martins Borgo">    Jean Marcel Martins Borgo</option>
+     <option value="João Leão e Souza Neto">   João Leão e Souza Neto</option>
+     <option value="João Paulo da Cunha Lima">   João Paulo da Cunha Lima</option>
+  <option value="João Paulo de Oliveira">  João Paulo de Oliveira</option>
+  <option value="João Paulo Greco">  João Paulo Greco</option>
+  <option value="Jorg Daoud Merched Youssef">  Jorg Daoud Merched Youssef</option>
+  <option value="Jorge Cezar Pereira de Castro">  Jorge Cezar Pereira de Castro</option>
+  <option value="Jorge Miranda">  Jorge Miranda</option>
+  <option value="José Augusto Bittencourt">  José Augusto Bittencourt</option>
+  <option value="Jose Carlos Truzzi">  Jose Carlos Truzzi</option>
+  <option value="José Freitas Melo Junior">  José Freitas Melo Junior</option>
+  <option value="José Henrique Di Giovanni">  José Henrique Di Giovanni</option>
+  <option value="José Luiz Nardi">  José Luiz Nardi</option>
+  <option value="José Paulo Coelho Martin">  José Paulo Coelho Martini</option>
+  <option value="José Ronaldo Bigatão">  José Ronaldo Bigatão</option>
+  <option value="Josinelio">  Josinelio</option>
+  <option value="Júlio Cesar Campos Bissoli">  Júlio Cesar Campos Bissoli</option>
+  <option value="Julio Padovani">  Julio Padovani</option>
+  <option value="Kleiton Yamacake">  Kleiton Yamacake</option>
+  <option value="Laércio Zavaloni">  Laércio Zavaloni</option>
+  <option value="Leonardo Inácio Braga">  Leonardo Inácio Braga</option>
+  <option value="Leonardo Lá Regina">  Leonardo Lá Regina</option>
+  <option value="Leonardo Welter">  Leonardo Welter</option>
+  <option value="Lucas Furtado Faria">  Lucas Furtado Faria</option>
+  <option value="Lucas La Ferreira">  Lucas La Ferreira</option>
+  <option value="Lucas Lambert">  Lucas Lambert</option>
+  <option value="Lino Cerveira">  Lino Cerveira</option>
+  <option value="Luís Bonett">  Luís Bonetti</option>
+  <option value="Luis Fernando Rocha de Abreu">  Luis Fernando Rocha de Abreu</option>
+  <option value="Luis Gustavo">  Luis Gustavo</option>
+  <option value="Luiz Antônio Bonetti Junior">  Luiz Antônio Bonetti Junior</option>
+  <option value="Luiz Cláudio Limão">  Luiz Cláudio Limão</option>
+  <option value="Luiz Dorley">  Luiz Dorley</option>
+  <option value="Luiz Eduardo Ferreti">  Luiz Eduardo Ferreti</option>
+  <option value="Luiz Felipe Brollo">  Luiz Felipe Brollo</option>
+  <option value="Luccas Soares">  Luccas Soares</option>
+  <option value="Marcello Schettino Barbosa">  Marcello Schettino Barbosa</option>
+  <option value="Marcelo Apezzato">  Marcelo Apezzato</option>
+  <option value="Marcelo Fornazzari">  Marcelo Fornazzari</option>
+  <option value="Marcelo Leite">  Marcelo Leite</option>
+  <option value="Marcelo Lorenzi">  Marcelo Lorenzi</option>
+  <option value="Marcelo Santos">  Marcelo Santos</option>
+  <option value="Marcelo Wassano">  Marcelo Wassano</option>
+  <option value="Márcio Navarro Gianelo">  Márcio Navarro Gianelo</option>
+  <option value="Márcio Pontes Reis">  Márcio Pontes Reis</option>
+  <option value="Opção 101">  Opção 101</option>
+  <option value="Márcio Rosa Pagan">  Márcio Rosa Pagan</option>
+  <option value="Marco Antonio Arap">  Marco Antonio Arap</option>
+  <option value="Marco Antônio Calil Assumpção">  Marco Antônio Calil Assumpção</option>
+  <option value="Marco Antônio Fioravante">  Marco Antônio Fioravante</option>
+  <option value="Marco Tulio Coelho Lasmar">  Marco Tulio Coelho Lasmar</option>
+  <option value="Marcos Figueiredo Mello">  Marcos Figueiredo Mello</option>
+  <option value="Marcos Segaw">  Marcos Segawa</option>
+  <option value="Marcos Kiyoshi">  Marcos Kiyoshi</option>
+  <option value="Marlon Fiorentini">  Marlon Fiorentini</option>
+  <option value="Mario Bittar">  Mario Bittar</option>
+  <option value="Mário Henrique Bueno Bavaresco">  Mário Henrique Bueno Bavaresco</option>
+  <option value="Mário José">  Mário José</option>
+  <option value="Mário Luis Casella">  Mário Luis Casella</option>
+  <option value="Matheus Amaral">  Matheus Amaral</option>
+  <option value="Matheus Almeida C Siqueira">  Matheus Almeida C Siqueira</option>
+  <option value="Matheus Ferreira">  Matheus Ferreira</option>
+  <option value="Matheus Neves Ribeiro">  Matheus Neves Ribeiro</option>
+  <option value="Mauricio Akira">  Mauricio Akira</option>
+  <option value="Maurício Peres">  Maurício Peres</option>
+  <option value="Maurilio Lucio Lima Meneguci">  Maurilio Lucio Lima Meneguci</option>
+  <option value="Nelson Luis Anacleto Artea">  Nelson Luis Anacleto Artea</option>
+  <option value="Nelson Luiz Arté">  Nelson Luiz Artéa</option>
+  <option value="Nyander Alex Ramos">  Nyander Alex Ramos</option>
+  <option value="Newton Soares de Sa Filho">  Newton Soares de Sa Filho</option>
+  <option value="Ocivaldo">  Ocivaldo</option>
+  <option value="Oscar Eduardo Hidetoshi Fugita">  Oscar Eduardo Hidetoshi Fugita</option>
+  <option value="Paulo Nogueira">  Paulo Nogueira</option>
+  <option value="Pedro Dias Soares">  Pedro Dias Soares</option>
+  <option value="Pedro Zapparoli Padovani">  Pedro Zapparoli Padovani</option>
+  <option value="Pericles Auad">  Pericles Auad</option>
+  <option value="Paulo Ebert Esteves">  Paulo Ebert Esteves</option>
+  <option value="Paulo Maron">  Paulo Maron</option>
+  <option value="Paulo Pontes">  Paulo Pontes</option>
+  <option value="Rafael C. Prata">  Rafael C. Prata</option>
+  <option value="Rafael Eduardo Marques">  Rafael Eduardo Marques</option>
+  <option value="Rafael Spada Rebechi">  Rafael Spada Rebechi</option>
+  <option value="Raphael Barroso Kato">  Raphael Barroso Kato</option>
+  <option value="Raphael Sanches">  Raphael Sanches</option>
+  <option value="Rafael Romero">  Rafael Romero</option>
+  <option value="Raul Queiroz Ferreira">  Raul Queiroz Ferreira</option>
+  <option value="Renato Alvim Soares">  Renato Alvim Soares</option>
+  <option value="Renato Vasconcelos">  Renato Vasconcelos</option>
+  <option value="Renato Yama">  Renato Yama</option>
+  <option value="Ricardo Brites">  Ricardo Brites</option>
+  <option value="Ricardo Cartaxo Filho">  Ricardo Cartaxo Filho</option>
+  <option value="Ricardo Di Miguelli">  Ricardo Di Miguelli</option>
+  <option value="Ricardo Marcondes de Mattos">  Ricardo Marcondes de Mattos</option>
+  <option value="Ricardo Segabinazzi">  Ricardo Segabinazzi</option>
+  <option value="Robert Conti">  Robert Conti</option>
+  <option value="Rodrigo Bocos">  Rodrigo Bocos</option>
+  <option value="Rodrigo Madeira Campos">  Rodrigo Madeira Campos</option>
+  <option value="Rodrigo Silva">  Rodrigo Silva</option>
+  <option value="Rodolfo Otávio Tomaz Bertti">  Rodolfo Otávio Tomaz Bertti</option>
+  <option value="Rodrigo Alcantara">  Rodrigo Alcantara</option>
+  <option value="Rodrigo Gonzales Bocos">  Rodrigo Gonzales Bocos</option>
+  <option value="Rodrigo Luvizotto">  Rodrigo Luvizotto</option>
+  <option value="Rodrigo Rodrigues Pessoa">  Rodrigo Rodrigues Pessoa</option>
+  <option value="Rodrigo Wilson">  Rodrigo Wilson</option>
+  <option value="Ronnie">  Ronnie</option>
+  <option value="Samuel Costa">  Samuel Costa</option>
+  <option value="Sander Cássio Zequi">  Sander Cássio Zequi</option>
+  <option value="Sandro Nassar">  Sandro Nassar</option>
+  <option value="Sandro W">  Sandro W</option>
+  <option value="Sergio Eduardo Martins">  Sergio Eduardo Martins</option>
+  <option value="Sergio Leite Ottoni">  Sergio Leite Ottoni</option>
+  <option value="Tarcísio">  Tarcísio</option>
+  <option value="Tiago Magalhães">  Tiago Magalhães</option>
+  <option value="Thiago Souto Hemerly">  Thiago Souto Hemerly</option>
+  <option value="Thyago Vieira Soares">  Thyago Vieira Soares</option>
+  <option value="Wagner Morandini">  Wagner Morandini</option>
+  <option value="Vasco Crivelaro">  Vasco Crivelaro</option>
+  <option value="Victor Monteiro">  Victor Monteiro</option>
+  <option value="Wanderley Crestoni Fernandes">  Wanderley Crestoni Fernandes</option>
+  <option value="Wilson Sato">  Wilson Sato</option>
+  <option value="Ying Li Chiang">  Ying Li Chiang</option>
+  <option value="Zein Mohamed">  Zein Mohamed</option>
+  <option value="Outros">  Outros</option>
+          </select>
+        </div>
+           </div>
 
+
+<!--Revisar esto del datepicker-->
+        <div class="row mb-3">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">DATA DA CIRURGIA:</label>
+          <div class="col-sm-10">
+           
             <div class="form-group">
               
        
@@ -364,280 +378,308 @@
                 </div>
                 
             </div>
-        </div>
+           </div>
         <script type="text/javascript">
             $(function () {
                 $('#datetimepicker1').datetimepicker();
             });
         </script>
-      </div>
-<br>
-
-
-
-
-        <label>DADOS DE IDENTIFICAÇÃO DO EQUIPAMENTO:  </label>
-        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-          <option selected>Selecione uma opção
-          </option>
-      <option value="">    2128812</option>
-    <option value="">    2319762</option>
-    <option value="">    2195152</option>
-    <option value="">    2909980</option>
-    <option value="">    2909981</option>
-    <option value="">    2193682</option>
-    <option value="">    2167817</option>
-    <option value="">    2152178</option>
-    <option value="">    2103103</option>
-    <option value="">    2103104</option>
-    <option value="">    2169993</option>
-    <option value="">    2358642</option>
-    <option value="">    2184706</option>
-    <option value="">    2620597</option>
-    <option value="">    2316487</option>
-    <option value="">   2504693</option>
- <option value=""> 2154402</option>
- <option value=""> 2184587</option>
- <option value=""> 2183287</option>
- <option value=""> 2183833</option>
- <option value=""> 2030271</option>
- <option value=""> 2203201</option>
- <option value=""> 2208789</option>
- <option value=""> 2157318</option>
- <option value=""> 2156897</option>
- <option value=""> 2233780</option>
- <option value=""> 2234024</option>
- <option value=""> 2485711</option>
- <option value=""> 2183416</option>
- <option value=""> 2150034</option>
- <option value=""> 2172392</option>
- <option value=""> 2227553</option>
- <option value=""> 2213934</option>
- <option value=""> 2203020</option>
- <option value=""> 2187125</option>
- <option value=""> 2187158</option>
- <option value=""> 2183831</option>
- <option value=""> 2002222</option>
- <option value=""> 2002111</option>
- <option value=""> 2004444</option>
- <option value=""> 2004333</option>
- <option value=""> 2141545</option>
- <option value=""> 2158255</option>
- <option value=""> 2011555</option>
- <option value=""> 2012777</option>
- <option value=""> 2012666</option>
- <option value=""> 2012888</option>
- <option value=""> 2102999</option>
- <option value=""> 2102101</option>
- <option value=""> 2102102</option>
- <option value=""> Opção 52</option> </select><br><br>
-
-
-
-
-    <label>OBSERVAÇÕES:</label><br>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Equipamento em bom estado    </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
-        <label class="form-check-label" for="flexCheckChecked">
-          Problemas na deflexão
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Problemas com borracha da ponta  </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Problemas na Ponta Flexível   </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Desalinhamento do horizonte   </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Problemas no canal de trabalho    </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Exposição da malha do tubo de inserção    </label>
-      </div>
-    
-      <br>
-      <label>FOI UTILIZADO FIBRA LASER:</label><br>
-        <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" >
-      <label class="form-check-label" for="exampleRadios1">
-        SIM
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-      <label class="form-check-label" for="exampleRadios2">
-        Não
-      </label>
-    </div>
-    
-    <br>
-    <label>LEAKAGE TEST:</label><br>
-      <div class="form-check">
-    <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios1" value="option1" >
-    <label class="form-check-label" for="exampleRadios1">
-      APROVADO
-    </label>
-    </div>
-    <div class="form-check">
-    <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios3" value="option3">
-    <label class="form-check-label" for="exampleRadios2">
-      APROVADO COM RESSALVA
-    </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios4" value="option4">
-      <label class="form-check-label" for="exampleRadios2">
-        NÃO APROVADO
-      </label>
-      </div>
-    
-    
-      <br>
-      <label>DEFLEXÃO/ANGULOS/PONTA FLEXÍVEL/FOLGA :</label><br>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios1" value="option1" >
-        <label class="form-check-label" for="exampleRadios1">
-          APROVADO
-        </label>
         </div>
-        <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
-          APROVADO COM RESSALVA
-        </label>
+
+<!--DADOS DE IDENTIFICAÇÃO DO EQUIPAMENTO:-->
+        <div class="row mb-3">
+            <label for="DOEQUIPAMENTO" class="col-sm-2 control-label" >DADOS DE IDENTIFICAÇÃO DO EQUIPAMENTO:</label>
+            <div class="col-sm-10">       
+        <select class="custom-select" class="form-control" id="DOEQUIPAMENTO" name="DOEQUIPAMENTO" required="required">
+            <option value="" selected>Selecione uma opção
+            </option>
+        <option value="2128812">    2128812</option>
+      <option value="2319762">    2319762</option>
+      <option value="2195152">    2195152</option>
+      <option value="2909980">    2909980</option>
+      <option value="2909981">    2909981</option>
+      <option value="2193682">    2193682</option>
+      <option value="2167817">    2167817</option>
+      <option value="2152178">    2152178</option>
+      <option value="2103103">    2103103</option>
+      <option value="2103104">    2103104</option>
+      <option value="2169993">    2169993</option>
+      <option value="2358642">    2358642</option>
+      <option value="2184706">    2184706</option>
+      <option value="2620597">    2620597</option>
+      <option value="2316487">    2316487</option>
+      <option value="2504693">   2504693</option>
+   <option value="2154402"> 2154402</option>
+   <option value="2184587"> 2184587</option>
+   <option value="2183287"> 2183287</option>
+   <option value="2183833"> 2183833</option>
+   <option value="2030271"> 2030271</option>
+   <option value="2203201"> 2203201</option>
+   <option value="2208789"> 2208789</option>
+   <option value="2157318"> 2157318</option>
+   <option value="2156897"> 2156897</option>
+   <option value="2233780"> 2233780</option>
+   <option value="2234024"> 2234024</option>
+   <option value="2485711"> 2485711</option>
+   <option value="2183416"> 2183416</option>
+   <option value="2150034"> 2150034</option>
+   <option value="2172392"> 2172392</option>
+   <option value="2227553"> 2227553</option>
+   <option value="2213934"> 2213934</option>
+   <option value="2203020"> 2203020</option>
+   <option value="2187125"> 2187125</option>
+   <option value="2187158"> 2187158</option>
+   <option value="2183831"> 2183831</option>
+   <option value="2002222"> 2002222</option>
+   <option value="2002111"> 2002111</option>
+   <option value="2004444"> 2004444</option>
+   <option value="2004333"> 2004333</option>
+   <option value="2141545"> 2141545</option>
+   <option value="2158255"> 2158255</option>
+   <option value="2011555"> 2011555</option>
+   <option value="2012777"> 2012777</option>
+   <option value="2012666"> 2012666</option>
+   <option value="2012888"> 2012888</option>
+   <option value="2102999"> 2102999</option>
+   <option value="2102101"> 2102101</option>
+   <option value="2102102"> 2102102</option>
+   <option value="Opção 52"> Opção 52</option>
+        </select>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            NÃO APROVADO
-          </label>
-          </div>
-    
-    
-          <br>
-          <label>ILUMINAÇÃO:
-            </label><br>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios1" value="option1" >
-            <label class="form-check-label" for="exampleRadios1">
-              APROVADO
-            </label>
-            </div>
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios2" value="option2">
-            <label class="form-check-label" for="exampleRadios2">
-              APROVADO COM RESSALVA
-            </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios2" value="option2">
-              <label class="form-check-label" for="exampleRadios2">
-                NÃO APROVADO
-              </label>
-              </div>
-    
-    
-              <br>
-              <label>IMAGEM:
-                </label><br>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios1" value="option1" >
-                <label class="form-check-label" for="exampleRadios1">
-                  APROVADO
-                </label>
-                </div>
-                <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios2" value="option2">
-                <label class="form-check-label" for="exampleRadios2">
-                  APROVADO COM RESSALVA
-                </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios2" value="option2">
-                  <label class="form-check-label" for="exampleRadios2">
-                    NÃO APROVADO
-                  </label>
-                  </div>
-    
-    
-                  <br>
-                  <label>ESTADO GERAL:
-                    </label><br>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios6" id="exampleRadios1" value="option1" >
-                    <label class="form-check-label" for="exampleRadios1">
-                      APROVADO
-                    </label>
-                    </div>
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios6" id="exampleRadios2" value="option2">
-                    <label class="form-check-label" for="exampleRadios2">
-                      APROVADO COM RESSALVA
-                    </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="exampleRadios6" id="exampleRadios2" value="option2">
-                      <label class="form-check-label" for="exampleRadios2">
-                        NÃO APROVADO
-                      </label>
-                      </div>
-    
-                      <br>
+        </div>
+      
+  <!--Observaciones:-->
+  <div class="row mb-3">
+    <label for="OBSERVACIONES" class="col-sm-2 control-label" >OBSERVAÇÕES</label>
+     <div class="col-sm-10">
+       <div class="form-check">
+         <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Equipamento em bom estado" name="OBSERVAÇÕES" value="Equipamento em bom estado">
+         <label class="form-check-label"     for="gridCheck1">
+           Equipamento em bom estado 
+         </label>
+       </div>
+       <div class="form-check">
+           <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Problemas na deflexão" name="OBSERVAÇÕES" value="Problemas na deflexão">
+           <label class="form-check-label" for="gridCheck1">
+               Problemas na deflexão
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Problemas com borracha da ponta"  name="OBSERVAÇÕES" value="Problemas com borracha da ponta">
+           <label class="form-check-label" for="gridCheck1">
+               Problemas com borracha da ponta
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Desalinhamento do horizonte" name="OBSERVAÇÕES" value="Desalinhamento do horizonte">
+           <label class="form-check-label" for="gridCheck1">
+               Desalinhamento do horizonte
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Problemas no canal de trabalhoe" name="OBSERVAÇÕES"  value="Problemas no canal de trabalhoe">
+           <label class="form-check-label" for="gridCheck1">
+               Problemas no canal de trabalho
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="checkbox" id="gridCheck1" id="OBSERVAÇÕES-Exposição da malha do tubo de inserção" name="OBSERVAÇÕES"  value="Exposição da malha do tubo de inserção">
+           <label class="form-check-label" for="gridCheck1">
+               Exposição da malha do tubo de inserção 
+           </label>
+         </div>
+       
+     </div>
+   </div> 
 
-
-
-
-
-
-
-                      <div class="form-inner">
-                      <button type="submit" href="/">Enviar</button>
-                      <button id ="btnBorrar">Borrar</button> 
-                      </div></form>
-
-   <!--     <input type="text" placeholder="Nombre y apellido">
-        <input type="text" placeholder="Correo electronico">
-        <textarea  id="contenido" placeholder="Mensaje..." rows="5"></textarea>
-        <button type="submit" href="/">Enviar</button>
-        <button id ="btnBorrar">Borrar</button> 
-
-            <button id="btnAgregar">Carga en indexedDB</button>
-        <button id ="btnCargaFirestore">Cargar en firestore</button>
-        <button id="btnBasedDeDatos">Muestra datos</button>
-        <button id="btnBaseDeDatosIndexed">Muestra datos Indexed</button>
         
 
-        <button id="statusCheck">¿Tengo internet?</button>
-        <div id="resultado"></div>  
-      </div>
+  
+     <!--FOI UTILIZADO FIBRA LASER::-->
+  <div class="row mb-3">
+    <label for="OBSERVACIONES" class="col-sm-2 control-label" >FOI UTILIZADO FIBRA LASER:</label>
+     <div class="col-sm-10">
+       <div class="form-check">
+        <input class="form-check-input" type="radio" name="fibralaser" id="flexRadioDefault1" value="SIM">
+        <label class="form-check-label" for="flexRadioDefault1">
+        SIM       
+        </label>
+       </div>
+       <div class="form-check">
+        <input class="form-check-input" type="radio" name="fibralaser" id="flexRadioDefault1" value="Não">
+        <label class="form-check-label" for="flexRadioDefault1">
+         Não
+        </label>
+         </div>
+               
+     </div>
+   </div> 
 
-      </div>-->
-  </body>
+
+
+
+    <!--LEAKAGE TEST:-->
+   <div class="row mb-3">
+    <label for="OBSERVACIONES" class="col-sm-2 control-label" >LEAKAGE TEST:</label>
+     <div class="col-sm-10">
+       <div class="form-check">
+        <input class="form-check-input" type="radio" name="LeakageTest" id="flexRadioDefault1" value="APROVADO">
+        <label class="form-check-label" for="flexRadioDefault1">
+            APROVADO      
+        </label>
+       </div>
+       <div class="form-check">
+        <input class="form-check-input" type="radio" name="LeakageTest" id="flexRadioDefault1" value="APROVADO COM RESSALVA">
+        <label class="form-check-label" for="flexRadioDefault1">
+            APROVADO COM RESSALVA
+        </label>
+         </div>
+         <div class="form-check">
+        <input class="form-check-input" type="radio" name="LeakageTest" id="flexRadioDefault1" value="NÃO APROVADO">
+        <label class="form-check-label" for="flexRadioDefault1">
+            NÃO APROVADO
+        </label>
+            </div>
+               
+     </div>
+   </div> 
  
-  <script src="sw.js"></script> 
-    <script src="firebase.js" type='module' ></script>
-    <script src="firebasefunctions.js" type='module'></script>
-    <script src="comportamientoNetwork.js" type='module'></script>
-    <script src="indexedDBfunctions.js" type='module'></script>
-
+   <!--DEFLEXÃO/ANGULOS/PONTA FLEXÍVEL/FOLGA :-->
+   <div class="row mb-3">
+    <label for="OBSERVACIONES" class="col-sm-2 control-label"  >DEFLEXÃO/ANGULOS<br>/PONTA FLEXÍVEL/FOLGA:</label>
     
-</body>
+     <div class="col-sm-10">
+       <div class="form-check">
+        <input class="form-check-input" type="radio"  id="flexRadioDefault1" value="APROVADO" name="DEFLEXÃO/ANGULOS">
+        <label  class="form-check-label" for="flexRadioDefault1">
+            APROVADO       
+        </label>
+       </div>
+       <div class="form-check">
+        <input class="form-check-input" type="radio" id="flexRadioDefault1"  value="APROVADO COM RESSALVA" name="DEFLEXÃO/ANGULOS">
+        <label class="form-check-label" for="flexRadioDefault1">
+            APROVADO COM RESSALVA
+        </label>
+         </div>
+         <div class="form-check">
+            <input class="form-check-input" type="radio"  id="flexRadioDefault1" value="NÃO APROVADO" name="DEFLEXÃO/ANGULOS">
+            <label class="form-check-label" for="flexRadioDefault1">
+                NÃO APROVADO
+            </label>
+             </div>
+               
+     </div>
+   </div> 
+
+    <!--ILUMINAÇÃO:-->
+   <div class="row mb-3">
+    <label for="OBSERVACIONES" class="col-sm-2 control-label" >ILUMINAÇÃO:</label>
+     <div class="col-sm-10">
+       <div class="form-check">
+        <input class="form-check-input" type="radio" name="ILUMINAÇÃO" id="flexRadioDefault1" value="APROVADO" >
+        <label class="form-check-label" for="flexRadioDefault1">
+            APROVADO       
+        </label>
+       </div>
+       <div class="form-check">
+        <input class="form-check-input" type="radio" name="ILUMINAÇÃO" id="flexRadioDefault1" value="APROVADO COM RESSALVA" >
+        <label class="form-check-label" for="flexRadioDefault1">
+            APROVADO COM RESSALVA
+        </label>
+         </div>
+         <div class="form-check">
+            <input class="form-check-input" type="radio" name="ILUMINAÇÃO" id="flexRadioDefault1" value="NÃO APROVADO"> 
+            <label class="form-check-label" for="flexRadioDefault1">
+                NÃO APROVADO
+            </label>
+             </div>
+               
+     </div>
+   </div> 
+ 
+   <!--IMAGEM:-->
+   <div class="row mb-3">
+    <label for="OBSERVACIONES" class="col-sm-2 control-label" >IMAGEM:</label>
+     <div class="col-sm-10">
+       <div class="form-check">
+        <input class="form-check-input" type="radio" name="IMAGEM" id="flexRadioDefault1" value="APROVADO">
+        <label class="form-check-label" for="flexRadioDefault1">
+            APROVADO       
+        </label>
+       </div>
+       <div class="form-check">
+        <input class="form-check-input" type="radio" name="IMAGEM" id="flexRadioDefault1" value="NÃO APROVADO">
+        <label class="form-check-label" for="flexRadioDefault1">
+            NÃO APROVADO
+        </label>
+         </div>
+         
+               
+     </div>
+   </div> 
+
+
+   <!--ESTADO GERAL:-->
+   <div class="row mb-3">
+    <label for="OBSERVACIONES" class="col-sm-2 control-label" >ESTADO GERAL:</label>
+     <div class="col-sm-10">
+       <div class="form-check">
+        <input class="form-check-input" type="radio" name="EstadoGeral" id="flexRadioDefault1" value="APROVADO">
+        <label class="form-check-label" for="flexRadioDefault1">
+            APROVADO       
+        </label>
+       </div>
+       <div class="form-check">
+        <input class="form-check-input" type="radio" name="EstadoGeral" id="flexRadioDefault1" value="APROVADO COM RESSALVA">
+        <label class="form-check-label" for="flexRadioDefault1">
+            APROVADO COM RESSALVA
+        </label>
+         </div>
+         <div class="form-check">
+            <input class="form-check-input" type="radio" name="EstadoGeral" id="flexRadioDefault1" value="NÃO APROVADO">
+            <label class="form-check-label" for="flexRadioDefault1">
+                NÃO APROVADO
+            </label>
+             </div>
+               
+     </div>
+   </div> 
+
+
+   <!--ESTADO GERAL:-->
+   <div class="row mb-3">
+    <label for="exampleFormControlTextarea1" class="col-sm-2 control-label" >OBSERVAÇÕES:</label>
+     <div class="col-sm-10">
+        <textarea class="form-control" name="OBSERVAÇÕESArea" id="exampleFormControlTextarea1" rows="3"></textarea>
+ 
+       
+
+     </div>
+   </div> 
+
+
+
+        <button type="submit" class="btn btn-primary" >Enviar</button>
+      </form>
+    </div>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+  <script src="./script3.js"></script>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
