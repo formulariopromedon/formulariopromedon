@@ -1,28 +1,81 @@
 
-// function getValues (event) {
-
-
-// console.log("hola")
-//     var formData = new FormData(); // Currently empty
-// console.log(formData)
-// }
-
+//Arma el JSON del formulario
 function handleSubmit(event) {
     event.preventDefault();
+    console.log("entre al handler")
 
     const data = new FormData(event.target);
 
   const value = Object.fromEntries(data.entries());
   value.OBSERVAÇÕES = data.getAll('OBSERVAÇÕES');
     console.log({ value });
-    sendJSON(value)
+    updateOnlineStatus(value)
+    // sendJSON(value)
+  }
+  
+ function indexedDBa(value) {
+    let baseDatos;
+    let solicitudConexion = indexedDB.open('notasBd', 1);
+
+    solicitudConexion.onsuccess = function(evento) {
+        baseDatos = evento.target.result;
+        console.log("se abrió piola")
+        addNota(value)
+    }
+
+    solicitudConexion.onerror = function(evento) {
+        document.querySelector('#contenido').innerText = `Error al abrir la base de datos: ${evento.target.errorCode}`;
+     }
+
+    solicitudConexion.onupgradeneeded = function(evento) {
+        baseDatos = evento.target.result;
+
+        let notas = baseDatos.createObjectStore('notas', {autoIncrement: true});
+    }
+
+    // document.querySelector('#btnAgregar').addEventListener('click', function(evento) {
+        // let contenido = document.querySelector('#contenido').value;
+      function addNota(value){
+        if(value){
+            let transaccion = baseDatos.transaction(['notas'], 'readwrite');
+            let notas = transaccion.objectStore('notas');
+           let nota = {value};  // estampa_tiempo: Date.now()
+            notas.add(nota);
+
+            transaccion.oncomplete = function() {
+                document.querySelector('#resultado').innerText = 'La nota se ha creado de forma satisfactoria.';
+            }
+
+            transaccion.onerror = function(evento) {
+                document.querySelector('#resultado').innerText = `Error al intentar almacenar una nota: ${evento.target.errorCode}`;
+            }
+
+        } else {
+            document.querySelector('#resultado').innerText = 'No ha escrito ningún valor en el campo contenido.';
+        }}}
+
+ //Handlea la acción según status de conexión
+  function updateOnlineStatus(value) {
+
+      if(navigator.onLine) {
+        sendJSON(value)
+
+      } else{        indexedDBa(value)
+
+
+      }
   }
 
+
+
+//Recepciona el Submit del formulario y distribuye al handler
   const form = document.querySelector('form');
-  form.addEventListener('submit', handleSubmit);
+  form.addEventListener('submit',handleSubmit);
 
 
 
+
+  //Envia hacia PowerAutomate
   function sendJSON(value){
 
   let xhr = new XMLHttpRequest()
@@ -40,3 +93,4 @@ var data = JSON.stringify({ value });
 // Sending data with the request
 xhr.send(data);
 }
+

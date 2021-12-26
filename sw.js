@@ -11,7 +11,7 @@ if ('serviceWorker' in navigator) {
 
 self.addEventListener('install', function(event) {
     var CACHE_NAME = 'my-site-cache-1';
-    var urlsToCache = ['./','./index.html','./indexCss.css','./firebase.js','./firebasefunctions.js','./comportamientoNetwork.js','./indexedDBfunctions.js'];
+    var urlsToCache = ['./','./index.html','./script3.js','./firebase.js','./firebasefunctions.js','./comportamientoNetwork.js','./indexedDBfunctions.js'];
         // Perform install steps
         event.waitUntil(
           caches.open(CACHE_NAME)
