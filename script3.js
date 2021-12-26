@@ -10,7 +10,6 @@ function handleSubmit(event) {
   value.OBSERVAÇÕES = data.getAll('OBSERVAÇÕES');
     console.log({ value });
     updateOnlineStatus(value)
-    // sendJSON(value)
   }
   
  function indexedDBa(value) {
