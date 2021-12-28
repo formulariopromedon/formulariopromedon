@@ -14,7 +14,7 @@ function handleSubmit(event) {
   
  function indexedDBa(value) {
     let baseDatos;
-    let solicitudConexion = indexedDB.open('notasBd', 1);
+    let solicitudConexion = indexedDB.open('notasBd', 2);
 
     solicitudConexion.onsuccess = function(evento) {
         baseDatos = evento.target.result;
