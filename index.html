@@ -31,8 +31,8 @@
         <div class="row mb-3">
            <label for="nomedoinstrumentador" class="col-sm-2 control-label" >NOME DO INSTRUMENTADOR:</label>
           <div class="col-sm-10">
-            <select class="custom-select" class="form-control" id="nomedoinstrumentador" name="nomedoinstrumentador" >
-                <option value="">Selecione uma opção</option>
+            <select class="custom-select" class="form-control" id="nomedoinstrumentador" name="nomedoinstrumentador" required >
+                <option value="" >Selecione uma opção</option>
                 <option value="Adriano Batalha">Adriano Batalha</option>
                 <option value="Ana Carolina Pedrozo">Ana Carolina Pedrozo</option>
                 <option value="Arthur Santana">Arthur Santana</option>
@@ -67,8 +67,8 @@
         <div class="row mb-3">
          <label for="hospital" class="col-sm-2 control-label" >HOSPITAL:</label>
          <div class="col-sm-10">
-         <select class="custom-select" class="form-control" id="hospital" name="hospital" >
-     <option selected>Selecione uma opção</option>
+         <select class="custom-select" class="form-control" id="hospital" name="hospital" required >
+     <option value="">Selecione uma opção</option>
       <option value="Albert Sabin">   Albert Sabin</option>
       <option value="Alvorada Jacareí (Jacareí)">   Alvorada Jacareí (Jacareí)</option>í
       <option value="Alvorada Moema">   Alvorada Moema</option>
@@ -137,8 +137,8 @@
         <div class="row mb-3">
             <label for="hospital" class="col-sm-2 control-label" >MEDICO:</label>
             <div class="col-sm-10">       
-           <select class="custom-select" class="form-control" id="medico"  name="medico" >
-            <option selected>Selecione uma opção
+           <select class="custom-select" class="form-control" id="medico"  name="medico" required >
+            <option value="">Selecione uma opção
             </option>
     
     
@@ -369,7 +369,7 @@
            
     <div class="form-group">
       <input type="date" id="start" name="DATADACIRURGIA"
-      min="2018-01-01" max="2024-12-31">
+      min="2018-01-01" max="2024-12-31" required>
 
               
        
@@ -384,7 +384,7 @@
         <div class="row mb-3">
             <label for="DOEQUIPAMENTO" class="col-sm-2 control-label" >DADOS DE IDENTIFICAÇÃO DO EQUIPAMENTO:</label>
             <div class="col-sm-10">       
-        <select class="custom-select" class="form-control" id="DOEQUIPAMENTO" name="DOEQUIPAMENTO" >
+        <select class="custom-select" class="form-control" id="DOEQUIPAMENTO" name="DOEQUIPAMENTO" required >
             <option value="" selected>Selecione uma opção
             </option>
         <option value="2128812">    2128812</option>
@@ -447,38 +447,38 @@
     <label for="OBSERVACIONES" class="col-sm-2 control-label" >OBSERVAÇÕES</label>
      <div class="col-sm-10">
        <div class="form-check">
-         <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Equipamento em bom estado" name="OBSERVAÇÕES" value="Equipamento em bom estado">
-         <label class="form-check-label"     for="gridCheck1">
+         <input required class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Equipamento em bom estado" name="OBSERVAÇÕES" value="Equipamento em bom estado">
+         <label class="form-check-label"     for="OBSERVAÇÕES-Equipamento em bom estado">
            Equipamento em bom estado 
          </label>
        </div>
        <div class="form-check">
-           <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Problemas na deflexão" name="OBSERVAÇÕES" value="Problemas na deflexão">
-           <label class="form-check-label" for="gridCheck1">
+           <input  class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Problemas na deflexão" name="OBSERVAÇÕES" value="Problemas na deflexão">
+           <label class="form-check-label" for="OBSERVAÇÕES-Problemas na deflexão">
                Problemas na deflexão
            </label>
          </div>
          <div class="form-check">
            <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Problemas com borracha da ponta"  name="OBSERVAÇÕES" value="Problemas com borracha da ponta">
-           <label class="form-check-label" for="gridCheck1">
+           <label class="form-check-label" for="OBSERVAÇÕES-Problemas com borracha da ponta">
                Problemas com borracha da ponta
            </label>
          </div>
          <div class="form-check">
            <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Desalinhamento do horizonte" name="OBSERVAÇÕES" value="Desalinhamento do horizonte">
-           <label class="form-check-label" for="gridCheck1">
+           <label class="form-check-label" for="OBSERVAÇÕES-Desalinhamento do horizonte">
                Desalinhamento do horizonte
            </label>
          </div>
          <div class="form-check">
            <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Problemas no canal de trabalho" name="OBSERVAÇÕES"  value="Problemas no canal de trabalho">
-           <label class="form-check-label" for="gridCheck1">
+           <label class="form-check-label" for="OBSERVAÇÕES-Problemas no canal de trabalho">
                Problemas no canal de trabalho
            </label>
          </div>
          <div class="form-check">
-           <input class="form-check-input" type="checkbox" id="gridCheck1" id="OBSERVAÇÕES-Exposição da malha do tubo de inserção" name="OBSERVAÇÕES"  value="Exposição da malha do tubo de inserção">
-           <label class="form-check-label" for="gridCheck1">
+           <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Exposição da malha do tubo de inserção" name="OBSERVAÇÕES"  value="Exposição da malha do tubo de inserção">
+           <label class="form-check-label" for="OBSERVAÇÕES-Exposição da malha do tubo de inserção">
                Exposição da malha do tubo de inserção 
            </label>
          </div>
@@ -486,7 +486,7 @@
      </div>
    </div> 
 
-        
+
 
   
      <!--FOI UTILIZADO FIBRA LASER::-->
@@ -494,14 +494,18 @@
     <label for="OBSERVACIONES" class="col-sm-2 control-label" >FOI UTILIZADO FIBRA LASER:</label>
      <div class="col-sm-10">
        <div class="form-check">
-        <input class="form-check-input" type="radio" name="fibralaser" id="flexRadioDefault1" value="SIM">
-        <label class="form-check-label" for="flexRadioDefault1">
+
+        <input class="form-check-input" type="radio" name="fibralaser" id="fibralaser1" value="SIM" required>
+        <label class="form-check-label" for="fibralaser1">
         SIM       
         </label>
+
        </div>
        <div class="form-check">
-        <input class="form-check-input" type="radio" name="fibralaser" id="flexRadioDefault1" value="Não">
-        <label class="form-check-label" for="flexRadioDefault1">
+
+        <input class="form-check-input" type="radio" name="fibralaser" id="fibralaser2" value="Não">
+        <label class="form-check-label" for="fibralaser2">
+
          Não
         </label>
          </div>
@@ -517,20 +521,20 @@
     <label for="OBSERVACIONES" class="col-sm-2 control-label" >LEAKAGE TEST:</label>
      <div class="col-sm-10">
        <div class="form-check">
-        <input class="form-check-input" type="radio" name="LeakageTest" id="flexRadioDefault1" value="APROVADO">
-        <label class="form-check-label" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="LeakageTest" id="LeakageTest1" value="APROVADO" required>
+        <label class="form-check-label" for="LeakageTest1">
             APROVADO      
         </label>
        </div>
        <div class="form-check">
-        <input class="form-check-input" type="radio" name="LeakageTest" id="flexRadioDefault1" value="APROVADO COM RESSALVA">
-        <label class="form-check-label" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="LeakageTest" id="LeakageTest2" value="APROVADO COM RESSALVA">
+        <label class="form-check-label" for="LeakageTest2">
             APROVADO COM RESSALVA
         </label>
          </div>
          <div class="form-check">
-        <input class="form-check-input" type="radio" name="LeakageTest" id="flexRadioDefault1" value="NÃO APROVADO">
-        <label class="form-check-label" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="LeakageTest" id="LeakageTest3" value="NÃO APROVADO">
+        <label class="form-check-label" for="LeakageTest3">
             NÃO APROVADO
         </label>
             </div>
@@ -545,20 +549,20 @@
       <label for="OBSERVACIONES" class="col-sm-2 control-label" >BORRACHA DA PONTA:</label>
        <div class="col-sm-10">
          <div class="form-check">
-          <input class="form-check-input" type="radio" name="BorrachaDaPonta" id="flexRadioDefault1" value="APROVADO">
-          <label class="form-check-label" for="flexRadioDefault1">
+          <input class="form-check-input" type="radio" name="BorrachaDaPonta" id="BorrachaDaPonta1" value="APROVADO" required>
+          <label class="form-check-label" for="BorrachaDaPonta1">
               APROVADO      
           </label>
          </div>
          <div class="form-check">
-          <input class="form-check-input" type="radio" name="BorrachaDaPonta" id="flexRadioDefault1" value="APROVADO COM RESSALVA">
-          <label class="form-check-label" for="flexRadioDefault1">
+          <input class="form-check-input" type="radio" name="BorrachaDaPonta" id="BorrachaDaPonta2" value="APROVADO COM RESSALVA">
+          <label class="form-check-label" for="BorrachaDaPonta2">
               APROVADO COM RESSALVA
           </label>
            </div>
            <div class="form-check">
-          <input class="form-check-input" type="radio" name="BorrachaDaPonta" id="flexRadioDefault1" value="NÃO APROVADO">
-          <label class="form-check-label" for="flexRadioDefault1">
+          <input class="form-check-input" type="radio" name="BorrachaDaPonta" id="BorrachaDaPonta3" value="NÃO APROVADO">
+          <label class="form-check-label" for="BorrachaDaPonta3">
               NÃO APROVADO
           </label>
               </div>
@@ -574,20 +578,20 @@
     
      <div class="col-sm-10">
        <div class="form-check">
-        <input class="form-check-input" type="radio"  id="flexRadioDefault1" value="APROVADO" name="DEFLEXÃO/ANGULOS">
-        <label  class="form-check-label" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio"  id="angulos1" value="APROVADO" name="DEFLEXÃO/ANGULOS" required>
+        <label  class="form-check-label" for="angulos1">
             APROVADO       
         </label>
        </div>
        <div class="form-check">
-        <input class="form-check-input" type="radio" id="flexRadioDefault1"  value="APROVADO COM RESSALVA" name="DEFLEXÃO/ANGULOS">
-        <label class="form-check-label" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" id="angulos2"  value="APROVADO COM RESSALVA" name="DEFLEXÃO/ANGULOS">
+        <label class="form-check-label" for="angulos2">
             APROVADO COM RESSALVA
         </label>
          </div>
          <div class="form-check">
-            <input class="form-check-input" type="radio"  id="flexRadioDefault1" value="NÃO APROVADO" name="DEFLEXÃO/ANGULOS">
-            <label class="form-check-label" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio"  id="angulos3" value="NÃO APROVADO" name="DEFLEXÃO/ANGULOS">
+            <label class="form-check-label" for="angulos3">
                 NÃO APROVADO
             </label>
              </div>
@@ -600,20 +604,20 @@
     <label for="OBSERVACIONES" class="col-sm-2 control-label" >ILUMINAÇÃO:</label>
      <div class="col-sm-10">
        <div class="form-check">
-        <input class="form-check-input" type="radio" name="ILUMINAÇÃO" id="flexRadioDefault1" value="APROVADO" >
-        <label class="form-check-label" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="ILUMINAÇÃO" id="ILUMINAÇÃO1" value="APROVADO" required>
+        <label class="form-check-label" for="ILUMINAÇÃO1">
             APROVADO       
         </label>
        </div>
        <div class="form-check">
-        <input class="form-check-input" type="radio" name="ILUMINAÇÃO" id="flexRadioDefault1" value="APROVADO COM RESSALVA" >
-        <label class="form-check-label" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="ILUMINAÇÃO" id="ILUMINAÇÃO2" value="APROVADO COM RESSALVA" >
+        <label class="form-check-label" for="ILUMINAÇÃO2">
             APROVADO COM RESSALVA
         </label>
          </div>
          <div class="form-check">
-            <input class="form-check-input" type="radio" name="ILUMINAÇÃO" id="flexRadioDefault1" value="NÃO APROVADO"> 
-            <label class="form-check-label" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="ILUMINAÇÃO" id="ILUMINAÇÃO3" value="NÃO APROVADO"> 
+            <label class="form-check-label" for="ILUMINAÇÃO3">
                 NÃO APROVADO
             </label>
              </div>
@@ -627,20 +631,20 @@
     <label for="OBSERVACIONES" class="col-sm-2 control-label" >SUPERFICÍE DA OBJETIVA:</label>
      <div class="col-sm-10">
        <div class="form-check">
-        <input class="form-check-input" type="radio" name="SuperficieDaObjetiva" id="flexRadioDefault1" value="APROVADO" >
-        <label class="form-check-label" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="SuperficieDaObjetiva" id="SuperficieDaObjetiva1" value="APROVADO" required>
+        <label class="form-check-label" for="SuperficieDaObjetiva1">
             APROVADO       
         </label>
        </div>
        <div class="form-check">
-        <input class="form-check-input" type="radio" name="SuperficieDaObjetiva" id="flexRadioDefault1" value="APROVADO COM RESSALVA" >
-        <label class="form-check-label" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="SuperficieDaObjetiva" id="SuperficieDaObjetiva2" value="APROVADO COM RESSALVA" >
+        <label class="form-check-label" for="SuperficieDaObjetiva2">
             APROVADO COM RESSALVA
         </label>
          </div>
          <div class="form-check">
-            <input class="form-check-input" type="radio" name="SuperficieDaObjetiva" id="flexRadioDefault1" value="NÃO APROVADO"> 
-            <label class="form-check-label" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="SuperficieDaObjetiva" id="SuperficieDaObjetiva3" value="NÃO APROVADO"> 
+            <label class="form-check-label" for="SuperficieDaObjetiva3">
                 NÃO APROVADO
             </label>
              </div>
@@ -657,14 +661,14 @@
     <label for="OBSERVACIONES" class="col-sm-2 control-label" >IMAGEM:</label>
      <div class="col-sm-10">
        <div class="form-check">
-        <input class="form-check-input" type="radio" name="IMAGEM" id="flexRadioDefault1" value="APROVADO">
-        <label class="form-check-label" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="IMAGEM" id="IMAGEM1" value="APROVADO" required>
+        <label class="form-check-label" for="IMAGEM1">
             APROVADO       
         </label>
        </div>
        <div class="form-check">
-        <input class="form-check-input" type="radio" name="IMAGEM" id="flexRadioDefault1" value="NÃO APROVADO">
-        <label class="form-check-label" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="IMAGEM" id="IMAGEM2" value="NÃO APROVADO">
+        <label class="form-check-label" for="IMAGEM2">
             NÃO APROVADO
         </label>
          </div>
@@ -679,20 +683,20 @@
     <label for="OBSERVACIONES" class="col-sm-2 control-label" >ESTADO GERAL:</label>
      <div class="col-sm-10">
        <div class="form-check">
-        <input class="form-check-input" type="radio" name="EstadoGeral" id="flexRadioDefault1" value="APROVADO">
-        <label class="form-check-label" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="EstadoGeral" id="EstadoGeral1" value="APROVADO" required>
+        <label class="form-check-label" for="EstadoGeral1">
             APROVADO       
         </label>
        </div>
        <div class="form-check">
-        <input class="form-check-input" type="radio" name="EstadoGeral" id="flexRadioDefault1" value="APROVADO COM RESSALVA">
-        <label class="form-check-label" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="EstadoGeral" id="EstadoGeral2" value="APROVADO COM RESSALVA">
+        <label class="form-check-label" for="EstadoGeral2">
             APROVADO COM RESSALVA
         </label>
          </div>
          <div class="form-check">
-            <input class="form-check-input" type="radio" name="EstadoGeral" id="flexRadioDefault1" value="NÃO APROVADO">
-            <label class="form-check-label" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="EstadoGeral" id="EstadoGeral3" value="NÃO APROVADO">
+            <label class="form-check-label" for="EstadoGeral3">
                 NÃO APROVADO
             </label>
              </div>
@@ -705,7 +709,7 @@
    <div class="row mb-3">
     <label for="exampleFormControlTextarea1" class="col-sm-2 control-label" >OBSERVAÇÕES:</label>
      <div class="col-sm-10">
-        <textarea class="form-control" name="OBSERVAÇÕESArea" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea class="form-control" name="OBSERVAÇÕESArea" id="exampleFormControlTextarea1" rows="3" required></textarea>
  
        
 
