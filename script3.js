@@ -42,7 +42,7 @@ function handleSubmit(event) {
             notas.add(nota);
 
             transaccion.oncomplete = function() {
-                document.querySelector('#resultado').innerText = 'La nota se ha creado de forma satisfactoria.';
+              document.querySelector('#resultado').innerText = 'No tienes sin internet. La nota se ha creado satisfactoriamente en la memoria local, reingrese con conexión para que impacte en sistema.';
             }
 
             transaccion.onerror = function(evento) {
@@ -91,5 +91,7 @@ var data = JSON.stringify({ value });
   
 // Sending data with the request
 xhr.send(data);
+document.querySelector('#resultado').innerText = 'La nota se ha enviado satisfactoriamente.';
+
 }
 

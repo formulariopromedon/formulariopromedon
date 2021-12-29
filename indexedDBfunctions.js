@@ -29,18 +29,17 @@
 
                     let nota = {contenido}; //, estampa_tiempo: Date.now()
                     notas.add(nota);
-                    document.querySelector('#contenido').innerText = 'Estamos re ok';
 
                     transaccion.oncomplete = function() {
-                        document.querySelector('#contenido').innerText = 'La nota se ha creado de forma satisfactoria.';
+                        document.querySelector('#resultado').innerText = 'No tienes sin internet. La nota se ha creado satisfactoriamente en la memoria local, reingrese con conexión y se enviará.';
                     }
 
                     transaccion.onerror = function(evento) {
-                        document.querySelector('#contenido').innerText = `Error al intentar almacenar una nota: ${evento.target.errorCode}`;
+                        document.querySelector('#resultado').innerText = `Error al intentar almacenar una nota: ${evento.target.errorCode}`;
                     }
 
                 } else {
-                    document.querySelector('#contenido').innerText = 'No ha escrito ningún valor en el campo contenido.';
+                    document.querySelector('#resultado').innerText = 'No ha escrito ningún valor en el campo contenido.';
                 }
             // });
         
