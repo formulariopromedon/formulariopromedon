@@ -488,7 +488,6 @@
    <script>
     $(function(){
         var requiredCheckboxes = $('.observation :checkbox[required]');
-        console.log(requiredCheckboxes)
         requiredCheckboxes.change(function(){
             if(requiredCheckboxes.is(':checked')) {
                 requiredCheckboxes.removeAttr('required');
@@ -759,13 +758,31 @@
 
  <script>
    window.addEventListener('load', () => {
-                console.log('Initially ' + (window.navigator.onLine ? 'on' : 'off') + 'line');
+    let baseDatos;
+    let solicitudConexion = indexedDB.open('notasBd',3);
+
+    solicitudConexion.onsuccess = function(evento) {
+        baseDatos = evento.target.result;
+ 
+    }
+
+    solicitudConexion.onerror = function(evento) {
+        document.querySelector('#contenido').innerText = `Error al abrir la base de datos: ${evento.target.errorCode}`;
+     }
+
+    solicitudConexion.onupgradeneeded = function(evento) {
+        baseDatos = evento.target.result;
+        let notas = baseDatos.createObjectStore('notas', {autoIncrement: true});
+    } 
+
+    console.log('Initially ' + (window.navigator.onLine ? 'on' : 'off') + 'line');
               if(window.navigator.onLine){  
                 document.querySelector('#networkPrint').style.cssText += 'background-color:lightgreen;font-weight: bold'
 
                 document.querySelector('#networkPrint').innerText = `Você tem uma conexão de internet`;
 
-                cargaIndexToFirestore()
+         
+
               }else {
                 document.querySelector('#networkPrint').innerText = `Você não tem uma conexão com a Internet. Ao enviar o formulário, as informações serão armazenadas e enviadas na próxima vez que você fizer login online.`
                 document.querySelector('#networkPrint').style.cssText += 'background-color:Crimson;font-weight: bold'

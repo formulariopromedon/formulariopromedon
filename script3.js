@@ -11,13 +11,15 @@ function handleSubmit(event) {
     updateOnlineStatus(value)
   }
   
+
  function indexedDBa(value) {
     let baseDatos;
-    let solicitudConexion = indexedDB.open('notasBd', 2);
+    let solicitudConexion = indexedDB.open('notasBd',3);
 
     solicitudConexion.onsuccess = function(evento) {
         baseDatos = evento.target.result;
-        addNota(value)
+     
+          addNota(value)
     }
 
     solicitudConexion.onerror = function(evento) {
@@ -26,7 +28,6 @@ function handleSubmit(event) {
 
     solicitudConexion.onupgradeneeded = function(evento) {
         baseDatos = evento.target.result;
-
         let notas = baseDatos.createObjectStore('notas', {autoIncrement: true});
     }
 
