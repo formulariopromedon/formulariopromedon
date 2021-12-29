@@ -7,7 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
     <title>FICHA DE CONTROLE</title>
   </head>
   <body>
@@ -357,7 +358,7 @@
            </div>
 
 
-<!--Revisar esto del datepicker-->
+<!--datepicker-->
 
 <div class="row mb-3">
   <label for="start" class="col-sm-2 col-form-label">DATA DA CIRURGIA:</label>
@@ -439,41 +440,43 @@
         </div>
       
   <!--Observaciones:-->
+  <div class="form-group observation">
+
   <div class="row mb-3">
     <label for="OBSERVACIONES" class="col-sm-2 control-label" >OBSERVAÇÕES</label>
      <div class="col-sm-10">
        <div class="form-check">
-         <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Equipamento em bom estado" name="OBSERVAÇÕES" value="Equipamento em bom estado">
+         <input required class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Equipamento em bom estado" name="OBSERVAÇÕES" value="Equipamento em bom estado">
          <label class="form-check-label"     for="OBSERVAÇÕES-Equipamento em bom estado">
            Equipamento em bom estado 
          </label>
        </div>
        <div class="form-check">
-           <input  class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Problemas na deflexão" name="OBSERVAÇÕES" value="Problemas na deflexão">
+           <input required class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Problemas na deflexão" name="OBSERVAÇÕES" value="Problemas na deflexão">
            <label class="form-check-label" for="OBSERVAÇÕES-Problemas na deflexão">
                Problemas na deflexão
            </label>
          </div>
          <div class="form-check">
-           <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Problemas com borracha da ponta"  name="OBSERVAÇÕES" value="Problemas com borracha da ponta">
+           <input required class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Problemas com borracha da ponta"  name="OBSERVAÇÕES" value="Problemas com borracha da ponta">
            <label class="form-check-label" for="OBSERVAÇÕES-Problemas com borracha da ponta">
                Problemas com borracha da ponta
            </label>
          </div>
          <div class="form-check">
-           <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Desalinhamento do horizonte" name="OBSERVAÇÕES" value="Desalinhamento do horizonte">
+           <input required class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Desalinhamento do horizonte" name="OBSERVAÇÕES" value="Desalinhamento do horizonte">
            <label class="form-check-label" for="OBSERVAÇÕES-Desalinhamento do horizonte">
                Desalinhamento do horizonte
            </label>
          </div>
          <div class="form-check">
-           <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Problemas no canal de trabalho" name="OBSERVAÇÕES"  value="Problemas no canal de trabalho">
+           <input required class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Problemas no canal de trabalho" name="OBSERVAÇÕES"  value="Problemas no canal de trabalho">
            <label class="form-check-label" for="OBSERVAÇÕES-Problemas no canal de trabalho">
                Problemas no canal de trabalho
            </label>
          </div>
          <div class="form-check">
-           <input class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Exposição da malha do tubo de inserção" name="OBSERVAÇÕES"  value="Exposição da malha do tubo de inserção">
+           <input required class="form-check-input" type="checkbox" id="OBSERVAÇÕES-Exposição da malha do tubo de inserção" name="OBSERVAÇÕES"  value="Exposição da malha do tubo de inserção">
            <label class="form-check-label" for="OBSERVAÇÕES-Exposição da malha do tubo de inserção">
                Exposição da malha do tubo de inserção 
            </label>
@@ -481,9 +484,20 @@
        
      </div>
    </div> 
-
-
-
+   </div>
+   <script>
+    $(function(){
+        var requiredCheckboxes = $('.observation :checkbox[required]');
+        console.log(requiredCheckboxes)
+        requiredCheckboxes.change(function(){
+            if(requiredCheckboxes.is(':checked')) {
+                requiredCheckboxes.removeAttr('required');
+            } else {
+                requiredCheckboxes.attr('required', 'required');
+            }
+        });
+    });
+    </script>
   
      <!--FOI UTILIZADO FIBRA LASER::-->
   <div class="row mb-3">
@@ -736,7 +750,6 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="./sw.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
