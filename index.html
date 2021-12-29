@@ -739,6 +739,10 @@
                 document.querySelector('#networkPrint').innerText = `Você tem uma conexão de internet`;
 
                 cargaIndexToFirestore()
+              }else {
+                document.querySelector('#networkPrint').innerText = `Você não tem uma conexão com a Internet.`;
+
+
               }})
 
    window.addEventListener('online', () => {

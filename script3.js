@@ -2,7 +2,6 @@
 //Arma el JSON del formulario
 function handleSubmit(event) {
     event.preventDefault();
-    console.log("entre al handler")
 
     const data = new FormData(event.target);
 
@@ -18,7 +17,6 @@ function handleSubmit(event) {
 
     solicitudConexion.onsuccess = function(evento) {
         baseDatos = evento.target.result;
-        console.log("se abrió piola")
         addNota(value)
     }
 
@@ -42,7 +40,7 @@ function handleSubmit(event) {
             notas.add(nota);
 
             transaccion.oncomplete = function() {
-              document.querySelector('#resultado').innerText = 'No tienes sin internet. La nota se ha creado satisfactoriamente en la memoria local, reingrese con conexión para que impacte en sistema.';
+              document.querySelector('#resultado').innerText = 'Você não tem sem internet. A nota foi criada com sucesso na memória local, por favor entre novamente online para impacto no sistema.';
             }
 
             transaccion.onerror = function(evento) {
@@ -91,7 +89,7 @@ var data = JSON.stringify({ value });
   
 // Sending data with the request
 xhr.send(data);
-document.querySelector('#resultado').innerText = 'La nota se ha enviado satisfactoriamente.';
+document.querySelector('#resultado').innerText = 'A nota foi enviada com sucesso.';
 
 }
 
