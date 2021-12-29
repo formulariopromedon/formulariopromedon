@@ -40,7 +40,11 @@ function handleSubmit(event) {
             notas.add(nota);
 
             transaccion.oncomplete = function() {
+              document.querySelector('#resultado').style.cssText += 'background-color:Crimson;font-weight: bold';
+
               document.querySelector('#resultado').innerText = 'Você não tem sem internet. A nota foi criada com sucesso na memória local, por favor entre novamente online para impacto no sistema.';
+              document.querySelector('form').reset();
+
             }
 
             transaccion.onerror = function(evento) {
@@ -89,7 +93,11 @@ var data = JSON.stringify({ value });
   
 // Sending data with the request
 xhr.send(data);
+document.querySelector('#resultado').style.cssText += 'background-color:lightgreen;font-weight: bold'
+
 document.querySelector('#resultado').innerText = 'A nota foi enviada com sucesso.';
+document.querySelector('form').reset();
+
 
 }
 
