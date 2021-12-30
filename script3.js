@@ -2,6 +2,7 @@
 //Arma el JSON del formulario
 function handleSubmit(event) {
     event.preventDefault();
+    console.log("entre al handler")
 
     const data = new FormData(event.target);
 
@@ -11,15 +12,13 @@ function handleSubmit(event) {
     updateOnlineStatus(value)
   }
   
-
  function indexedDBa(value) {
     let baseDatos;
-    let solicitudConexion = indexedDB.open('notasBd',3);
+    let solicitudConexion = indexedDB.open('notasBd', 2);
 
     solicitudConexion.onsuccess = function(evento) {
         baseDatos = evento.target.result;
-     
-          addNota(value)
+        addNota(value)
     }
 
     solicitudConexion.onerror = function(evento) {
@@ -28,7 +27,8 @@ function handleSubmit(event) {
 
     solicitudConexion.onupgradeneeded = function(evento) {
         baseDatos = evento.target.result;
-        let notas = baseDatos.createObjectStore('notas', {autoIncrement: true});
+
+        // let notas = baseDatos.createObjectStore('notas', {autoIncrement: true});
     }
 
     // document.querySelector('#btnAgregar').addEventListener('click', function(evento) {
@@ -41,11 +41,7 @@ function handleSubmit(event) {
             notas.add(nota);
 
             transaccion.oncomplete = function() {
-              document.querySelector('#resultado').style.cssText += 'background-color:Crimson;font-weight: bold';
-
-              document.querySelector('#resultado').innerText = 'Você não tem sem internet. A nota foi criada com sucesso na memória local, por favor entre novamente online para impacto no sistema.';
-              document.querySelector('form').reset();
-
+                document.querySelector('#resultado').innerText = 'La nota se ha creado de forma satisfactoria.';
             }
 
             transaccion.onerror = function(evento) {
@@ -94,11 +90,5 @@ var data = JSON.stringify({ value });
   
 // Sending data with the request
 xhr.send(data);
-document.querySelector('#resultado').style.cssText += 'background-color:lightgreen;font-weight: bold'
-
-document.querySelector('#resultado').innerText = 'A nota foi enviada com sucesso.';
-document.querySelector('form').reset();
-
-
 }
 
